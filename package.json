@@ -2,7 +2,7 @@
   "name": "copyfc",
   "displayName": "copyfc",
   "description": "Copies file content to clipboard",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "publisher": "MarkusHL",
   "repository": {
     "type": "git",
