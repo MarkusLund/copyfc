@@ -1,103 +1,51 @@
-# copyfc
+# CopyFC - VS Code Extension
 
-**copyfc** is a simple yet powerful Visual Studio Code extension that copies the content of a file to your system clipboard, prefixed with a header that includes the file's relative path from the project root. This can be very useful when you need to share code snippets or file contents with context.
+**CopyFC** is a lightweight Visual Studio Code extension that copies file content to the clipboard with a header containing the file’s relative path.
 
 ## Features
 
-- **Copy with Header**: When activated, the extension reads the file content and prepends a header in the format:
-
-  ```
-  ===== relative/path/to/file =====
-  ```
-
-- **Automatic Project Root Detection**: The extension searches for a `.vscode` or `.git` folder to determine the project root. If none is found, it falls back to the workspace folder.
-- **Easy Access**: The command is available both from the editor context menu and the Explorer context menu.
-- **Seamless Integration**: Works with any file opened in VS Code that has a `file` scheme.
-
-## Installation
-
-1. **Clone or Download** the repository containing the extension source code.
-2. **Install Dependencies**: Run the following command in the extension's root directory:
-   ```bash
-   npm install
-   ```
-3. **Build the Extension**: Compile the source code using:
-   ```bash
-   npm run compile
-   ```
-4. **Launch in VS Code**:
-   - Open the extension folder in VS Code.
-   - Press `F5` to launch an Extension Development Host instance.
+- **Copies File Content with Context** – Adds a header with the file's relative path.
+- **Supports Multiple Selections** – Works with single or multiple files.
+- **Project Root Detection** – Uses `.vscode` or `.git` folders to determine the root.
+- **Easy Access** – Available via the editor and Explorer context menus.
 
 ## Usage
 
-1. **From the Editor**:
-   - Open a file in the editor.
-   - Right-click anywhere in the editor window and select **Copy File Content with Header** from the context menu.
-2. **From the Explorer**:
-   - Right-click on a file in the Explorer view.
-   - Select **Copy File Content with Header** from the context menu.
-
-After executing the command, the file's content (prefixed with its header) will be copied to your system clipboard. You can then paste it wherever needed.
-
-## Command Details
-
-- **Command Name**: `extension.copyFileContentWithHeader`
-- **Activation**: This command can be triggered from either the editor or Explorer context menus.
-- **Behavior**:
-  - If the command is invoked from the Explorer, it uses the file selected.
-  - If the command is invoked from the editor, it uses the active document.
-  - Determines the project root using `.vscode` or `.git` folders.
-  - Computes the file's relative path from the project root and includes it in the header.
-  - Displays an error message if no valid file is selected.
+- **From the Editor**: Right-click and select **Copy File Content with Header**.
+- **From the Explorer**: Right-click a file and choose **Copy File Content with Header**.
+- The copied content includes the file's relative path and its content.
 
 ## Development
 
-### Scripts
-
-- **Compile the Extension**:
-  ```bash
-  npm run compile
-  ```
-- **Watch for Changes**:
-  ```bash
-  npm run watch
-  ```
-- **Lint the Code**:
-  ```bash
-  npm run lint
-  ```
-- **Package the Extension** (for production release):
-  ```bash
-  npm run package
-  ```
-
-### Testing
-
-- **Compile Tests**:
-  ```bash
-  npm run compile-tests
-  ```
-- **Run Tests**:
-  ```bash
-  npm run test
-  ```
+- **Compile:** `npm run compile`
+- **Watch for changes:** `npm run watch`
+- **Lint:** `npm run lint`
+- **Test:** `npm run test`
+- **Package for release:** `npm run package`
 
 ## Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/your-repo/copyfc/issues) if you want to contribute.
+Contributions are welcome! Open an issue or submit a pull request on [GitHub](https://github.com/MarkusLund/CopyFC/issues).
 
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Make your changes.
-4. Commit your changes (`git commit -am 'Add new feature'`).
-5. Push to the branch (`git push origin feature-branch`).
-6. Open a pull request.
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/MarkusLund/CopyFC.git
+   cd CopyFC
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Build the extension:
+   ```bash
+   npm run compile
+   ```
+4. Launch in VS Code:
+   - Open the folder in VS Code.
+   - Press `F5` to start a development instance.
 
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
-
----
-
-Enjoy using **copyfc** to streamline your workflow in VS Code!
+MIT License. See `LICENSE` for details.
