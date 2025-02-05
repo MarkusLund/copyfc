@@ -1,71 +1,100 @@
-# copyfc README
+# copyfc
 
-This is the README for your extension "copyfc". After writing up a brief description, we recommend including the following sections.
+**copyfc** is a simple yet powerful Visual Studio Code extension that copies the content of a file to your system clipboard, prefixed with a header that includes the file's parent folder and name. This can be very useful when you need to share code snippets or file contents with context.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- **Copy with Header**: When activated, the extension reads the file content and prepends a header in the format:
 
-For example if there is an image subfolder under your extension project workspace:
+  ```
+  ===== parentFolder/fileName =====
+  ```
 
-\!\[feature X\]\(images/feature-x.png\)
+- **Easy Access**: The command is available both from the editor context menu and the Explorer context menu.
+- **Seamless Integration**: Works with any file opened in VS Code that has a `file` scheme.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Installation
 
-## Requirements
+1. **Clone or Download** the repository containing the extension source code.
+2. **Install Dependencies**: Run the following command in the extension's root directory:
+   ```bash
+   npm install
+   ```
+3. **Build the Extension**: Compile the source code using:
+   ```bash
+   npm run compile
+   ```
+4. **Launch in VS Code**:
+   - Open the extension folder in VS Code.
+   - Press `F5` to launch an Extension Development Host instance.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## Usage
 
-## Extension Settings
+1. **From the Editor**:
+   - Open a file in the editor.
+   - Right-click anywhere in the editor window and select **Copy File Content with Header** from the context menu.
+2. **From the Explorer**:
+   - Right-click on a file in the Explorer view.
+   - Select **Copy File Content with Header** from the context menu.
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+After executing the command, the file's content (prefixed with its header) will be copied to your system clipboard. You can then paste it wherever needed.
 
-For example:
+## Command Details
 
-This extension contributes the following settings:
+- **Command Name**: `extension.copyFileContentWithHeader`
+- **Activation**: This command can be triggered from either the editor or Explorer context menus.
+- **Behavior**:
+  - If the command is invoked from the Explorer, it uses the file selected.
+  - If the command is invoked from the editor, it uses the active document.
+  - Displays an error message if no valid file is selected.
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+## Development
 
-## Known Issues
+### Scripts
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+- **Compile the Extension**:
+  ```bash
+  npm run compile
+  ```
+- **Watch for Changes**:
+  ```bash
+  npm run watch
+  ```
+- **Lint the Code**:
+  ```bash
+  npm run lint
+  ```
+- **Package the Extension** (for production release):
+  ```bash
+  npm run package
+  ```
 
-## Release Notes
+### Testing
 
-Users appreciate release notes as you update your extension.
+- **Compile Tests**:
+  ```bash
+  npm run compile-tests
+  ```
+- **Run Tests**:
+  ```bash
+  npm run test
+  ```
 
-### 1.0.0
+## Contributing
 
-Initial release of ...
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/your-repo/copyfc/issues) if you want to contribute.
 
-### 1.0.1
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes.
+4. Commit your changes (`git commit -am 'Add new feature'`).
+5. Push to the branch (`git push origin feature-branch`).
+6. Open a pull request.
 
-Fixed issue #.
+## License
 
-### 1.1.0
-
-Added features X, Y, and Z.
+Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Enjoy using **copyfc** to streamline your workflow in VS Code!
