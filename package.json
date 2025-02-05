@@ -24,18 +24,11 @@
       }
     ],
     "menus": {
-      "editor/context": [
-        {
-          "command": "extension.copyFileContentWithHeader",
-          "when": "editorTextFocus",
-          "group": "navigation"
-        }
-      ],
       "explorer/context": [
         {
           "command": "extension.copyFileContentWithHeader",
           "when": "resourceScheme == 'file'",
-          "group": "navigation"
+          "group": "copyfc"
         }
       ]
     }
