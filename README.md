@@ -1,15 +1,16 @@
 # copyfc
 
-**copyfc** is a simple yet powerful Visual Studio Code extension that copies the content of a file to your system clipboard, prefixed with a header that includes the file's parent folder and name. This can be very useful when you need to share code snippets or file contents with context.
+**copyfc** is a simple yet powerful Visual Studio Code extension that copies the content of a file to your system clipboard, prefixed with a header that includes the file's relative path from the project root. This can be very useful when you need to share code snippets or file contents with context.
 
 ## Features
 
 - **Copy with Header**: When activated, the extension reads the file content and prepends a header in the format:
 
   ```
-  ===== parentFolder/fileName =====
+  ===== relative/path/to/file =====
   ```
 
+- **Automatic Project Root Detection**: The extension searches for a `.vscode` or `.git` folder to determine the project root. If none is found, it falls back to the workspace folder.
 - **Easy Access**: The command is available both from the editor context menu and the Explorer context menu.
 - **Seamless Integration**: Works with any file opened in VS Code that has a `file` scheme.
 
@@ -46,6 +47,8 @@ After executing the command, the file's content (prefixed with its header) will 
 - **Behavior**:
   - If the command is invoked from the Explorer, it uses the file selected.
   - If the command is invoked from the editor, it uses the active document.
+  - Determines the project root using `.vscode` or `.git` folders.
+  - Computes the file's relative path from the project root and includes it in the header.
   - Displays an error message if no valid file is selected.
 
 ## Development
