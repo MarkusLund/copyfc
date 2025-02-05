@@ -1,7 +1,13 @@
 {
   "name": "copyfc",
-  "displayName": "copyfc",
-  "description": "Copies file content to clipboard",
+  "displayName": "CopyFC",
+  "description": "Copies file contents to clipboard. Adds a header with the file name and path. Very practical for sharing code snippets with i.e. LLMs like ChatGPT, Claude etc.",
+  "keywords": [
+    "copy",
+    "file",
+    "content",
+    "header"
+  ],
   "version": "0.1.0",
   "publisher": "MarkusHL",
   "repository": {
@@ -11,10 +17,6 @@
   "engines": {
     "vscode": "^1.96.0"
   },
-  "categories": [
-    "Other"
-  ],
-  "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
