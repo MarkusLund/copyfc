@@ -1,6 +1,7 @@
 {
   "name": "copyfc",
   "displayName": "CopyFC",
+  "icon": "images/icon.png",
   "description": "Copies file contents to clipboard. Adds a header with the file name and path. Very practical for sharing code snippets with LLMs like ChatGPT, Claude, etc.",
   "keywords": [
     "copy",
