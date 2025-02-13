@@ -67,10 +67,6 @@
     "lint": "eslint src",
     "test": "vscode-test"
   },
-  "files": [
-    "dist",
-    "README.md"
-  ],
   "devDependencies": {
     "@types/vscode": "^1.96.0",
     "@types/mocha": "^10.0.10",
