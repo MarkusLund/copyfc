@@ -8,11 +8,14 @@
 - **Supports Multiple Selections** – Works with single or multiple files.
 - **Project Root Detection** – Uses `.vscode` or `.git` folders to determine the root.
 - **Easy Access** – Available via the editor and Explorer context menus.
+- **Folder Support** – Right-click a folder in the Explorer to copy all its files recursively.
 
 ## Usage
 
 - **From the Editor**: Right-click and select **Copy File Content with Header**.
-- **From the Explorer**: Right-click a file and choose **Copy File Content with Header**.
+- **From the Explorer**:
+  - Right-click a file and choose **Copy File Content with Header**.
+  - Right-click a folder and choose **Copy Folder Content with Header** to copy all files recursively.
 - The copied content includes the file's relative path and its content.
 
 ## Development
